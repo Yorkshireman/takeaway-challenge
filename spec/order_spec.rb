@@ -6,7 +6,7 @@ describe "Order" do
   
   before :each do
     @subject = Order.new menu
-    allow(@subject).to receive(:send_sms).and_return true
+    allow(Sms).to receive(:send).and_return true
   end
 
   context 'when created' do 
